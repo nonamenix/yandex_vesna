@@ -8,7 +8,7 @@ var all_topics = ["astronomy", "geology", "gyroscope", "literature", "marketing"
 				url: yandex_vesna_url + '?t=' + topics.join('+'), 
 				success: function(data){
 					var html = $(data).find('.referats__text')
-					var title = html.find('strong').text();
+					var title = html.find('strong').text().replace('Тема: «', '').replace('»', '');
 					var body = [];
 					html.find('p').each(function(i, el){
 						body.push('<p>' + $(el).text() + '</p>');
@@ -18,7 +18,8 @@ var all_topics = ["astronomy", "geology", "gyroscope", "literature", "marketing"
 						topics:topics,
 						body: body.join('')
 					}
-					render_text(referat)
+					render_text(referat);
+					return false;
 				}})
 		}
 		function render_text(referat){

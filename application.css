@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.panel {
+	margin: 0;
+	-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.15);
+	box-shadow: 0 0 0 1px rgba(0,0,0,.15);
+	padding: 10px;
+}
+.content {
+	min-width: 400px;
+	padding: 10px;
+}
+
+.contorls {
+	padding: 7px 0 0 0;
+}
+
+.logo {
+	border: ;
+}
+a {
+    outline: 0;
+}

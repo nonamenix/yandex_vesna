@@ -4,18 +4,32 @@
 	<meta charset="utf-8">
 	<script src="jquery.min.js"></script>
 	<script src="popup.js"></script>
-	<style>
-		body {
-			padding: 10px;
-		}
-		.content {
-			min-width: 400px;
-		}
-	</style>
+	<link rel="stylesheet" href="application.css">
+	<link rel="stylesheet" href="yandex.css">
 </head>
 <body>
 	<div class="panel">
-		<a href="#reload" id='reload'>Новый текст</a>
+		<div class="layout__left">
+			<div class="logo">
+				<a class="logo__link" href="http://www.yandex.ru"></a>
+			</div>
+			<div class="arrow i-font i-font_face_textbook">
+				<div class="arrow__inner">
+					<div class="arrow__service">
+						<a class="link" href="http://vesna.yandex.ru/referats/">Рефераты</a>
+						<div class="arrow__corner">
+							<div class="arrow__triangle"></div>
+						</div>
+					</div>
+				</div>
+				<div class="arrow__corner"><div class="arrow__triangle"></div></div>
+			</div>
+		</div>
+		<div class="layout__main">
+			<div class="contorls">
+				<a class="link" href="#reload" id='reload'>Новый текст</a>		
+			</div>			
+		</div>			
 	</div>
 	<div class="content"></div>
 </body>
