@@ -7,7 +7,7 @@
 }
 .layout__left {
 	display: inline-block;
-	width: 250px;
+	width: 210px;
 	margin-right: 10px;
 	vertical-align: top;
 }
@@ -95,4 +95,30 @@
 }
 .arrow__service .link {
 	color: inherit!important;
+}
+
+.button {
+	cursor: pointer;
+	border: 0;
+	background: 0 0;
+	padding: 5px 10px;
+}
+
+.button_theme_action {
+	border-radius: 3px;
+}
+.button_theme_action {
+	font-family: Arial,sans-serif;
+	color: #000;
+	border-radius: 3px;
+}
+.button_size_m {
+	font-size: 15px;
+}
+
+.button_theme_action {
+	border-radius: 2px;
+	background: #ffdb4d;
+	-webkit-box-shadow: 0 0 0 1px rgba(191,153,0,.8);
+	box-shadow: 0 0 0 1px rgba(191,153,0,.8);
 }

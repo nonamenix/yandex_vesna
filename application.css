@@ -15,12 +15,13 @@ body {
 }
 
 .contorls {
-	padding: 7px 0 0 0;
+	padding: 0;
 }
 
-.logo {
-	border: ;
+
+h1 {
+	font-size: 18px;
 }
-a {
-    outline: 0;
+a, button {
+	outline: 0;
 }
