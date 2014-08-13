@@ -122,3 +122,6 @@
 	-webkit-box-shadow: 0 0 0 1px rgba(191,153,0,.8);
 	box-shadow: 0 0 0 1px rgba(191,153,0,.8);
 }
+.button_theme_action:hover {
+	background: #ffeca6;
+}

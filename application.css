@@ -9,19 +9,52 @@ body {
 	box-shadow: 0 0 0 1px rgba(0,0,0,.15);
 	padding: 10px;
 }
+.copy_buttons {
+	padding: 10px;
+}
 .content {
 	min-width: 400px;
-	padding: 10px;
+	padding: 5px;
 }
 
 .contorls {
 	padding: 0;
 }
 
-
 h1 {
 	font-size: 18px;
 }
 a, button {
 	outline: 0;
+}
+
+.topic {
+	padding: 2px 5px;
+}
+.body {
+	padding: 5px;
+}
+.body p {
+	margin: 5px 0 0 0;
+}
+.body p:first-child {
+	margin: 0;
+}
+.topic:hover, .body:hover {
+	/*background-color: #d9edf7;*/
+	background-color: rgba(217, 237, 247, 0.5);
+	border-color: #bce8f1;
+}
+
+.tips {
+	position: absolute;
+	border-radius: 2px;
+	bottom: 3px;
+	right: 3px;
+	padding: 3px;
+	height: 20px;
+	background: #ffeca6;
+	-webkit-box-shadow: 0 0 0 1px rgba(191,153,0,.8);
+	box-shadow: 0 0 0 1px rgba(191,153,0,.8);
+
 }
