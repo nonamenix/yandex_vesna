@@ -10,3 +10,5 @@
 Текстами рефератов можно пользоваться совершенно бесплатно, однако при транслировании и предоставлении текстов в массовое пользование ссылка на Яндекс.Рефераты обязательна.
 
 http://vesna.yandex.ru/referats/
+
+![Скриншот расширения Яндека.Рефераты](https://raw.githubusercontent.com/nonamenix/yandex_vesna/master/images/yandex-vesna-chrome-extension.png)
