@@ -13,7 +13,7 @@ body {
 	padding: 10px;
 }
 .content {
-	min-width: 400px;
+	width: 400px;
 	padding: 5px;
 }
 
@@ -23,13 +23,21 @@ body {
 
 h1 {
 	font-size: 18px;
+	margin-bottom: 2px;
 }
 a, button {
 	outline: 0;
 }
 
-.topic {
+.slug-wrapper, .title {
 	padding: 2px 5px;
+}
+.slug-wrapper {
+	margin: 0;
+}
+.slug {
+	font-style: italic;
+	padding: 0 2px;
 }
 .body {
 	padding: 5px;
@@ -40,8 +48,7 @@ a, button {
 .body p:first-child {
 	margin: 0;
 }
-.topic:hover, .body:hover {
-	/*background-color: #d9edf7;*/
+.title:hover, .body:hover, .slug:hover {
 	background-color: rgba(217, 237, 247, 0.5);
 	border-color: #bce8f1;
 }

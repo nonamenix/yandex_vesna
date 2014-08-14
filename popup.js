@@ -1,6 +1,8 @@
 var all_topics = ["astronomy", "geology", "gyroscope", "literature", "marketing", "mathematics", "music", "polit", "agrobiologia", "law", "psychology", "geography", "physics", "philosophy", "chemistry", "estetica"];
 var copy_with_html = false;
+var show_slug = true;
 var yandex_vesna_url = 'http://vesna.yandex.ru/referats/?t=';
+
 function generate_text(topics){
 	if (topics==undefined) {
 		topics = all_topics
@@ -11,7 +13,7 @@ function generate_text(topics){
 			var html = $(data).find('.referats__text')
 
 			var title = html.find('strong').text().replace('Тема: «', '').replace('»', '');
-			var html_title = ['<h1 class="topic" title="Кликни чтобы скопировать заголовок">', title, '</h1>'].join('')
+			var html_title = ['<h1 class="title" title="Кликни чтобы скопировать заголовок">', title, '</h1>'].join('')
 			
 			var body = []
 			var html_body = ['<div class="body" title="Кликни чтобы скопировать текст">'];
@@ -22,9 +24,13 @@ function generate_text(topics){
 			})
 			html_body.push('</div>');
 
+			var slug = slugify(title);
+			var html_slug = ['<p class="slug-wrapper">url: <span class="slug">', slug, '</span></p>'].join('')
 			referat = {
 				html_title: html_title,
 				title: title,
+				slug: slug,
+				html_slug: html_slug,
 				topics: topics,
 				body: body.join('\n'),
 				html_body: html_body.join('')
@@ -35,14 +41,24 @@ function generate_text(topics){
 }
 function render_text(referat){
 	$content = $('.content');
-	_html = [referat.html_title, referat.html_body]
+	
+	_html = [referat.html_title]
+	if (show_slug) {
+		_html.push(referat.html_slug)
+	}
+	
+	_html.push(referat.html_body)
+	
 	$content.html(_html.join(''))
 
-	$('.topic').on('click', function(){		
+	$('.title').on('click', function(){		
 		copyToClipboard(referat.title);
 	})
 	$('.body').on('click', function(){
 		copyToClipboard(referat.body);
+	})
+	$('.slug').on('click', function(){		
+		copyToClipboard(referat.slug);
 	})
 }
 
@@ -60,9 +76,7 @@ function copyToClipboard( text ){
 		$this = $(this)
 		setTimeout(function(){
 			$this.fadeOut(300);
-		}, 1000)
-
-		
+		}, 1000)		
 	});
 }
 
@@ -71,5 +85,12 @@ $(function(){
 	$('#reload').on('click', function(){
 		generate_text(all_topics);
 	});
-	generate_text()
+	generate_text();
 })
+
+
+
+
+
+
+
