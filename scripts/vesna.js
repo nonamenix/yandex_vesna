@@ -2,7 +2,7 @@
 	var all_topics, yandex_vesna_url, settings, debug, methods, insert_to;
 	
 	all_topics = ["astronomy", "geology", "gyroscope", "literature", "marketing", "mathematics", "music", "polit", "agrobiologia", "law", "psychology", "geography", "physics", "philosophy", "chemistry", "estetica"];
-	yandex_vesna_url = 'http://vesna.yandex.ru/referats/?t=';
+	yandex_vesna_url = 'https://vesna.yandex.ru/referats/?t=';
 	settings = {
 		copy_with_html: false,
 		show_slug: true,
